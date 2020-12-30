@@ -121,7 +121,7 @@ class MainViewModel(private val repository: TitleRepository) : ViewModel() {
     /**
      * Refresh the title, showing a loading spinner while it refreshes and errors via snackbar.
      */
-    fun refreshTitle() {
+    private fun refreshTitle() {
         viewModelScope.launch {
             try {
                 _spinner.value = true
